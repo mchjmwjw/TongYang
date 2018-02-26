@@ -8,5 +8,6 @@ from datetime import *
 class Product(db.Model):
     __tablename__ = 'ty_product'
     phid = db.Column(db.String(32), primary_key=True)
-    name = db.Column(db.String(64), unique=True)
+    name = db.Column(db.String, unique=True)
+    content = db.Column(db.String)
 

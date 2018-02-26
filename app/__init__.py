@@ -25,8 +25,8 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     # 注册auth蓝本
-    from .auth import auth as auth_blueprint
-    app.register_blueprint(auth_blueprint, url_prefix='/auth')  # 路由加上前缀
+    # from .auth import auth as auth_blueprint
+    # app.register_blueprint(auth_blueprint, url_prefix='/auth')  # 路由加上前缀
 
     pagedown.init_app(app)
 
