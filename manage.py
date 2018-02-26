@@ -14,8 +14,8 @@ def make_shell_context():
     return dict(app=app, db=db, Product=Product)
 manager.add_command("shell", Shell(make_context=make_shell_context))
 
-server = Server(host="https://tongyang.herokuapp.com/", port=8080) # https还要加入参数 ssl_context='adhoc'
-manager.add_command("runserver", server)
+# server = Server(host="https://tongyang.herokuapp.com/", port=8000)  # https还要加入参数 ssl_context='adhoc'
+# manager.add_command("runserver", server)
 
 if __name__ == '__main__':
     manager.run()
