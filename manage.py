@@ -3,11 +3,13 @@ from app import create_app, db
 from app.models import Product
 from flask_script import Manager, Shell, Server
 from flask_migrate import Migrate, MigrateCommand
+from flask_cors import *
 
 app = create_app('default')
 manager = Manager(app)
 migrate = Migrate(app, db)
 manager.add_command('db', MigrateCommand)
+CORS(app, supports_credentials=True)
 
 
 def make_shell_context():

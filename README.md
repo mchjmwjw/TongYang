@@ -16,3 +16,4 @@
 ```
 
 8. pip freeze >requirements.txt
+9. pip install -r requirements.txt
