@@ -16,3 +16,6 @@
 ```
 
 8. pip freeze >requirements.txt
+
+
+# frontend  前端文件
