@@ -6,9 +6,6 @@
 	font-family: "Microsoft YaHei";
 	font-size: 14px;
 }
-body{
-	min-width:900px;
-}
 header,section,nav,aside,article,footer{display: block;}
 a{
 	text-decoration: none;

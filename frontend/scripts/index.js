@@ -1,9 +1,9 @@
 $(function(){  
 		//激活导航栏链接样式
-		var  filename=location.href;
-		filename=filename.substr(filename.lastIndexOf('/')+1);  
+		var  filename=$("title").text();
+		filename=filename.substr(filename.lastIndexOf('-')+1);  
 		$("nav a").each(function(){
-			if($(this).attr("href")==filename){
+			if($(this).text()==filename){
 				$(this).addClass("active");
 				console.log(1);
 			}
