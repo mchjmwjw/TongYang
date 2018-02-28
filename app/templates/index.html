@@ -1,10 +1,130 @@
 {% extends "base.html" %}
 
+{% block title %}
+    - 首页
+{% endblock %}
+
 {% block head %}
-<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/demo.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
 {% endblock %}
 
 {% block page_content %}
-<h1>demo</h1>
+
+    <!--右侧分享及置顶组件-->
+	<div class="wechat-code hidden">
+		<h2>扫一扫</h2>
+		<span>×</span>
+		<img src="{{ url_for('static', filename='images/wechatcode.png') }}">
+	</div>
+	<div class="nav-side">
+		<div class="nav-side-item"><a id="wechat"><img src="{{ url_for('static', filename='images/weichat.png') }}" title="添加微信"></a></div>
+		<div class="nav-side-item"><a id="qq" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2583985111&site=qq&menu=yes"><img src="{{ url_for('static', filename='images/qq.png') }}" alt="联系QQ" title="联系QQ"></a></div>
+		<div class="nav-side-item" id="back-to-top"><img src="{{ url_for('static', filename='images/top.jpg') }}" title="回到顶部"></div>
+	</div>
+	<!--顶部-->
+	<header>
+		<div class="container">
+			<a href="index.html">
+				<div class="logo">
+					<div class="circle">
+					 	<div id="arrow1">
+					 		<div class=" arr arr_left"></div>
+							<div class="arr arr_right"></div>
+					 	</div>
+					 	<div id="arrow2">
+					 		<div class=" arr arr_left"></div>
+							<div class="arr arr_right"></div>
+					 	</div>
+					 	<div id="arrow3">
+					 		<div class=" arr arr_left"></div>
+							<div class="arr arr_right"></div>
+					 	</div>
+				 	</div>
+					<span class="T1">T</span>
+					<span class="Y1">Y</span>
+					<div class="mask">
+						<span class="T2">T</span>
+						<span class="Y2">Y</span>
+					</div>
+				</div>
+				<span class="co-name">砼洋</span>
+			</a>
+			<nav>
+				<a href="index.html">首页</a>
+				<a href="#">公司简介</a>
+				<a href="#">产品介绍</a>
+				<a href="#">成功案例</a>
+				<a href="#">联系我们</a>
+			</nav>
+		</div>
+	</header>
+	<!--banner区-->
+	<section class="banner">
+			<img src="{{ url_for('static', filename='images/banner.jpg') }}" />
+			<div>
+				<h1>杭州砼洋机械有限公司</h1>
+				<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+			</div>
+	</section>
+	<!--公司简介-->
+	<section class="profile">
+		<div  class="sec_block">
+			<h1>公司简介</h1>
+			<article>
+				杭州砼洋机械有限公司坐落于中国5A级旅游城市，人间天堂杭州，是一家集研究、开发、生产于一体的高新技术企业，公司长期致力于…………………………………………………………………………………………………………………………，公司经营产品主要分类有：
+			</article>
+			<ul>
+				<li>AAA</li>
+				<li>BBB</li>
+				<li>CCC</li>
+				<li>DDD</li>
+				<li>EEE</li>
+			</ul>
+		</div>
+
+	</section>
+	<!--产品展示-->
+	<section class="product">
+		<div class="sec_block">
+			<ul class="product-list">
+				<li><div class="p-mask hidden"><span>混凝土搅拌机</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/1.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>混凝土搅拌机</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/2.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/3.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>大型混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/4.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>小型混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/5.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/6.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/7.jpg') }}"></li>
+				<li><div class="p-mask hidden"><span>混凝土搅拌站</span><a href="#" title="查看详情">→</a></div><img src="{{ url_for('static', filename='images/products/8.jpg') }}"></li>
+		</ul>
+		<article>
+				<a href="">···&nbsp;&nbsp;&nbsp;了解更多产品请点击&nbsp;&nbsp;&nbsp;···</a>
+			</article>
+		</div>
+	</section>
+	<!--成功案例-->
+	<section class="case">
+		<div class="sec_block">
+			<h1>成功案例</h1>
+			<article>
+				公司与多家单位有过合作#%*（%￥@#￥—…………………………………………………………………………………………………………………………取得了很好的成效。
+			</article>
+			<div class="case_list">
+				<dl><img src="{{ url_for('static', filename='images/case/1.jpg') }}" /><dt>AAA</dt><dd>此处用一句话对项目进行简述</dd><a href="">详情</a></dl>
+				<dl><img src="{{ url_for('static', filename='images/case/2.jpg') }}" /><dt>BBB</dt><dd>此处用一句话对项目进行简述</dd><a href="">详情</a></dl>
+				<dl><img src="{{ url_for('static', filename='images/case/3.jpg') }}" /><dt>CCC</dt><dd>此处用一句话对项目进行简述</dd><a href="">详情</a></dl>
+			</div>
+			<article>
+				<a href="">···&nbsp;&nbsp;&nbsp;了解更多案例请点击&nbsp;&nbsp;&nbsp;···</a>
+			</article>
+		</div>
+	</section>
+
+	<!--页脚-->
+	<footer>
+		<div>Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2018.Company&nbsp;&nbsp;name</div>
+	</footer>
+	<script src="{{ url_for('static', filename='scripts/jquery/jquery-1.12.4.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='scripts/index.js') }}"></script>
 
 {% endblock %}

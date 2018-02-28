@@ -100,5 +100,12 @@ ENV/
 # mypy
 .mypy_cache/
 
+*/.idea/
 .idea/
-pyvenv.cfg
+.idea
+
+*/.vscode/
+.vscode/
+.vscode
+
+migrations/
